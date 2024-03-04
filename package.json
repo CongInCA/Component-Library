@@ -23,7 +23,7 @@
     "build": "ESLINT_NO_DEV_ERRORS=true TSC_COMPILE_ON_ERROR=true react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "storybook": "storybook dev -p 6006",
+    "storybook": "start-storybook -p 8083 -c .storybook",
     "build-storybook": "storybook build"
   },
   "eslintConfig": {

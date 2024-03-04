@@ -10,14 +10,23 @@ COPY package*.json ./
 # Install dependencies
 RUN npm install
 
-# Copy all local files to the container
+# Copy the rest of the application code to the working directory
 COPY . .
 
-# Build the production application
-RUN npm run build
+# RUN npm run rollup
 
-# Expose port 8083 to the outside world
-EXPOSE 8083
+RUN npm run build-storybook
 
-# Command to run the application
-CMD ["npm", "start"]
+RUN npm install -g http-server
+
+CMD ["http-server", "storybook-static", "-p 8083"]
+
+# Define the command to run your application
+# CMD ["npm", "start"]
+
+# Additional instructions based on feedback
+# Include build and run commands
+# Note: Adjust the actual build and run commands based on your project structure and requirements
+# e.g., If you use Storybook, include relevant commands here
+
+# Run command example (replace with your actual run command)
