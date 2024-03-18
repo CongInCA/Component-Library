@@ -11,8 +11,10 @@ This is a UI component library/toolkit built with React and Storybook.
 
 ### Installation
 
-1. Clone the repository:
+1. Use docker to build a image.
+   docker build -t cong_chen_ui_garden .
 
-```bash git clone https://github.com/your-username/your-repo.git
+2. Run the docker.
+   docker run -p 8083:8083 cong_chen_ui_garden
 
-```
+3. Browse localhost:8083 in the browser.
